@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Contato</title>
+    <link rel="stylesheet" href="/src/styles/general.css">
+    <link rel="stylesheet" href="/src/styles/contato.css">
+    <script type="module" src="/index.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SEEY60KWY8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SEEY60KWY8');
+</script>
+<body>
+    <div class="wrapper">
+        <header>
+    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+    <div class="topHeader">
+        <div class="iconetopo">
+                    <img src="/src/images/nossa_senhora_perpetuoSOC.jpg" alt="Nossa Senhora do Perpétuo Socorro">
+
+        </div>
+        <h2 class="headerTitle">Igreja Nossa Senhora do<br>Perpétuo Socorro e<br>São Judas Tadeu</h2>
+    </div>
+    
+    <div class="bottonHeader">
+        <div>
+        <a href="https://diocesedenovaiguacu.org.br/"><img src="/src/images/D_NI_Brasao.png" alt=""></a>
+            <p>Diocese de Nova Iguaçu</p>
+        </div>
+        <p class="centerText">Missa na forma<br>antiga do<br>Rito Romano</p>
+        <div>
+        <a href="https://adapostolica.org/"><img src="/src/images/AdmApos.png" alt=""></a>
+            <p>Administração Apostolica<br>São João Maria Vianney</p>
+        </div>
+    </div>
+    <div class="topButtons">
+        <a href="/"><button>Início</button></a>
+        <a href="/capelas"><button>Capelas e Horários</button></a>
+        <div class="dropdown">
+            <a href="/midias"><button class="dropbtn">Mídias</button></a>
+            <div class="dropdown-content">
+            <a href="/galerias"><button>Galerias</button></a>
+            <a href="/homilias"><button>Homilias</button></a>
+            <a href="/cartas"><button>Cartas e Artigos</button></a>
+            <a href="/artigos"><button>Vídeos</button></a>
+            </div>
+        </div>
+        <a href="/doacoes"><button>Doações</button></a>
+        <a href="/contato"><button>Contato</button></a>
+    </div>
+    <div class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()" style="position: absolute;
+    font-size: 28px;
+    right: 25px;
+    top: 5%;
+    color: var(--branco);">×</span>
+        <ul>
+            <li><a href="/" onclick="toggleSidebar()">Inicio</a></li>
+            <li><a href="/portfolio" onclick="toggleSidebar()">Capelas e Horários</a></li>
+            <li><a href="/services" onclick="toggleSidebar()">Notícias e Eventos</a></li>
+            <li><a href="/services" onclick="toggleSidebar()">Mídias</a></li>
+            <li><a href="/doacoes" onclick="toggleSidebar()">Doações</a></li>
+            <li><a href="/contato" onclick="toggleSidebar()">Contato</a></li>
+        </ul>
+    </div>
+    <img src="/src/images/desenho-ornamental.png" alt="arabesco" class="header-arabesco">
+</header>
+        <div class="mainContent" style="border-style: none; overflow: hidden;">
+        
+             <a name="contato">
+        <h3>Entre em contato conosco:</h3>
+    </a>
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/igrejaperpetuosocorro">
+                <img src="/images/ico-facebook-2.png" width="30" height="28" alt="Facebook">
+                <span class="style8">/igrejaperpetuosocorro</span>
+            </a>
+        </li>
+        <li>
+            <p class="style3">
+                <img src="/images/nick_whats.svg" width="120" height="30" alt="WhatsApp">
+            </p>
+            <p class="style3">
+                +55 21 96660-5930
+            </p>
+            <a href="https://wa.me/5521966605930?text=Bom+dia%2C+eu+desejo+uma+informação+%21" target="_blank" class="whatsapp-link">
+                Entre em contato pelo WhatsApp!!
+            </a>
+        </li>
+    </ul>
+        
+        </div>
+    </div>
+    <!--#include virtual="/footer" -->
+</body>
+</html>

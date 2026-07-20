@@ -1,0 +1,65 @@
+.contentDiv {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#mapframe{
+    width: 600px;
+    height: 500px; /* Altura do mapa */
+    border: none; /* Remove a borda do iframe */
+}
+.selectors{
+    display: flex;
+    flex-direction: row;
+    width: 600px; /* Mesma largura do mapa */
+
+}
+
+.selectors button {
+    height: 50px;
+    flex-grow: 1; /* Faz os botões crescerem igualmente */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border: 1px solid #ccc; /* Borda visível */
+    background-color: #f9f9f9; /* Fundo claro */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    max-width: 100%; /* Evita que os botões ultrapassem o limite */
+}
+
+.selectors p {
+    flex-grow: 2; /* Faz o parágrafo ocupar mais espaço */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove margens extras */
+    line-height: 1.5; /* Alinha o texto verticalmente */
+    white-space: nowrap; /* Evita quebra de linha no texto */    
+    width: 100px; /* Define uma largura fixa */
+    white-space: normal; /* Permite a quebra de linha automática */
+    margin-top: 5px;
+
+}
+@media (max-width: 768px) {
+    #map {
+        align-items: center;
+        width: 100%;
+        height: 200px; /* Altura do mapa */
+        border: none; /* Remove a borda do iframe */
+    }
+    .selectors{
+        display: flex;
+        flex-direction: row;
+        width: 100%; /* Mesma largura do mapa */
+    
+    }
+    .contentDiv{
+    display: flex;
+    flex-direction: column;
+    }
+    #mapframe{
+        align-self: center;
+        width: 100%;
+        height: 200px; /* Altura do mapa */
+        border: none; /* Remove a borda do iframe */
+    }
+}

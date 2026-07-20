@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garantir que o conteúdo preencha a altura disponível */
+    align-items: center;
+    color: #333333;
+    background: linear-gradient(to bottom, #cce7ff, #fefbf2);
+    min-height: 100vh; /* Garante que o body tenha ao menos a altura total da tela */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Fonte padrão para conteúdo */
+}
+
+#wrapper {
+    flex-direction: column;
+    width: 50%;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid #555;
+    background: #ffffeb;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#headerTitle {
+    font-family: 'Cormorant', sans-serif;
+    font-size: 3rem; /* Ajuste dinâmico do tamanho da fonte */
+    line-height: 1.2;
+    color: #416C26;
+    text-transform: uppercase; /* Torna o texto maiúsculo */
+    letter-spacing: 2px; /* Dá mais espaçamento entre letras */
+    margin: 0;
+}
+
+
+
+#centerText{
+    font-weight: bold;
+    font-size: 20pt;
+    align-self: center; 
+    text-align: center;
+}
+#bottonHeader {
+    display: flex; /* Colocar itens lado a lado */
+    justify-content:space-evenly;
+    gap: 20px; /* Espaço entre os itens */
+    text-align: center;
+    align-items: flex-start;  
+}
+#bottonHeader img {
+    width: auto; /* Limitar largura */
+    height: 128px;
+     /* Manter proporção */
+}
+header img {
+    width: 30%;   /* Ajuste o tamanho do ícone */
+    height: auto;   /* Manter a proporção */
+}
+
+
+
+
+/* Estilizar o container dos botões */
+#topButtons {
+    display: flex; /* Itens lado a lado */
+    width: 100%; /* Ocupa toda a largura disponível */
+    justify-content: space-evenly; /* Distribuir os botões igualmente */
+    margin-top: 20px; /* Espaço acima dos botões */
+    height: auto;
+}
+
+/* Estilizar os botões */
+#topButtons button {
+    flex: 1; /* Cada botão ocupará um espaço igual */
+    font-size: 16px;
+    background-color: #416C26; /* Cor de fundo do botão */
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+#topButtons button:hover {
+    background-color: #497a2a; /* Efeito de hover para o botão */
+}
+
+#mainContent {
+    width: 100%; /* Um valor mínimo para garantir que a div tenha alguma altura inicial */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+footer {
+    background-color: #3b5a73;
+    color: white;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}

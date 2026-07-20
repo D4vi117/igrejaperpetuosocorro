@@ -1,0 +1,105 @@
+
+        h3 {
+            font-size: 24px;
+            color: #416C26;
+            margin-bottom: 10px;
+        }
+        u {
+            text-decoration: underline;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        .doacao-container {
+            margin-top: 20px;
+
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center; /* Coloca os itens lado a lado */
+            margin-bottom: 20px;
+        }
+
+        .doacao-container p {
+
+            margin-bottom: 10px;
+            flex: 1;
+        }
+
+        .qrcode-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0; /* Impede que o QR code encolha */
+        }
+
+        .qrcode-container img {
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .contact-info b {
+            font-size: 18px;
+            color: #416C26;
+        }
+
+        /* Estilo para o botão de copiar */
+        .copyButton {
+            background-color: #416C26;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .copyButton:hover {
+            background-color: #355d1c;
+        }
+
+        .pix-code {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            word-wrap: break-word;
+        }
+
+        @media (max-width: 768px) {
+            h3 {
+                font-size: 20px;
+            }
+            .doacao-container p, .contact-info {
+                font-size: 14px;
+            }
+
+            .qrcode-container img {
+                width: 150px;
+            }
+
+            .doacao-container {
+                flex-direction: column; /* Em telas menores, empilha os elementos */
+                align-items: center;
+            }
+
+            .qrcode-container {
+                margin-top: 20px;
+            }
+        }

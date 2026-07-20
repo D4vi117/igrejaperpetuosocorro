@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Doações</title>
+    <link rel="stylesheet" href="/src/styles/general.css">
+    <link rel="stylesheet" href="/src/styles/doacoes.css">
+    <script type="module" src="/index.js"></script>
+    <script src="/src/scripts/doacoes.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SEEY60KWY8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SEEY60KWY8');
+</script>
+<body>
+    <div class="wrapper">
+        <header>
+    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+    <div class="topHeader">
+        <div class="iconetopo">
+                    <img src="/src/images/nossa_senhora_perpetuoSOC.jpg" alt="Nossa Senhora do Perpétuo Socorro">
+
+        </div>
+        <h2 class="headerTitle">Igreja Nossa Senhora do<br>Perpétuo Socorro e<br>São Judas Tadeu</h2>
+    </div>
+    
+    <div class="bottonHeader">
+        <div>
+        <a href="https://diocesedenovaiguacu.org.br/"><img src="/src/images/D_NI_Brasao.png" alt=""></a>
+            <p>Diocese de Nova Iguaçu</p>
+        </div>
+        <p class="centerText">Missa na forma<br>antiga do<br>Rito Romano</p>
+        <div>
+        <a href="https://adapostolica.org/"><img src="/src/images/AdmApos.png" alt=""></a>
+            <p>Administração Apostolica<br>São João Maria Vianney</p>
+        </div>
+    </div>
+    <div class="topButtons">
+        <a href="/"><button>Início</button></a>
+        <a href="/capelas"><button>Capelas e Horários</button></a>
+        <div class="dropdown">
+            <a href="/midias"><button class="dropbtn">Mídias</button></a>
+            <div class="dropdown-content">
+            <a href="/galerias"><button>Galerias</button></a>
+            <a href="/homilias"><button>Homilias</button></a>
+            <a href="/cartas"><button>Cartas e Artigos</button></a>
+            <a href="/artigos"><button>Vídeos</button></a>
+            </div>
+        </div>
+        <a href="/doacoes"><button>Doações</button></a>
+        <a href="/contato"><button>Contato</button></a>
+    </div>
+    <div class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()" style="position: absolute;
+    font-size: 28px;
+    right: 25px;
+    top: 5%;
+    color: var(--branco);">×</span>
+        <ul>
+            <li><a href="/" onclick="toggleSidebar()">Inicio</a></li>
+            <li><a href="/portfolio" onclick="toggleSidebar()">Capelas e Horários</a></li>
+            <li><a href="/services" onclick="toggleSidebar()">Notícias e Eventos</a></li>
+            <li><a href="/services" onclick="toggleSidebar()">Mídias</a></li>
+            <li><a href="/doacoes" onclick="toggleSidebar()">Doações</a></li>
+            <li><a href="/contato" onclick="toggleSidebar()">Contato</a></li>
+        </ul>
+    </div>
+    <img src="/src/images/desenho-ornamental.png" alt="arabesco" class="header-arabesco">
+</header>
+        <div class="mainContent" style="border-style: none; overflow: hidden;">
+            <div class="doacao-container">
+                <p>Se desejar contribuir, sua doação pode ser realizada de forma simples e rápida através de uma transferência por PIX.<br>
+                Sua ajuda faz a diferença e nos permite continuar com nosso trabalho.</p>
+            </div>
+            <div class="doacao-container">
+                <div>
+                    <p><u><strong>Colabore:</strong></u></p>
+                    <div class="contact-info">
+                        <p><b>Associação Civil Nossa Senhora do Perpétuo Socorro</b></p>
+                        <p><b>CNPJ:</b> 03.291.653/0001-65</p>
+                        <p><b>Rua:</b> Ministro José Linhares, 66 - Rodilândia - Nova Iguaçu - RJ</p>
+                        <p><b>CEP:</b> 26083-125</p>
+                        <p><b>Conta Banco do Brasil</b></p>
+                        <p><b>C/C:</b> 14.678-1</p>
+                        <p><b>Agência:</b> 0081</p>
+                        <p><b>Código IBAN:</b> BR2600000000000810000146781</p>
+                    </div>
+                </div>
+                <div class="qrcode-container">
+                    <img src="/src/images/qrcode-pix.png" alt="QR Code para doação" width="200">
+                    
+                    <button class="copyButton" onclick="copyToClipboard()">Copiar Código PIX</button>
+
+                    <p>Escaneie ou Copie o código abaixo para fazer sua doação via PIX.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include virtual="/footer" -->
+</body>
+</html>
