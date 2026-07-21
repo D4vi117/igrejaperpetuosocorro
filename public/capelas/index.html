@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/src/styles/capelas.css">
     <link rel="stylesheet" href="/src/styles/map.css">
     <script type="module" src="/src/scripts/index.js"></script>
-    <script src="/src/scripts/capelas.js" defer></script>
+    <script type="module" src="/src/scripts/capelas.js"></script>
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -79,22 +79,16 @@
             </div>
             <img src="/src/images/desenho-ornamental.png" alt="arabesco" class="header-arabesco">
         </header>
-        <div id="mainContent" style="border-style: none; overflow: hidden;"></div>
-        <div class="contentDiv" style="min-height: 650px; display: flex; margin: 15px; align-items: start;">
-            <div style="display:flex;flex-direction: column; width: 100%; align-items: center;">
-                <h1>Mapa das Capelas</h1>
-                <iframe id="mapframe"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7359.392192912678!2d-43.501861!3d-22.7395344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995d7557630609%3A0xbb628aee99177a10!2sIgreja%20Nossa%20Senhora%20do%20Perp%C3%A9tuo%20Socorro%20e%20S%C3%A3o%20Judas%20Tadeu!5e0!3m2!1spt-BR!2sbr!4v1737036550216!5m2!1spt-BR!2sbr"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <div class="selectors" style="display: flex; flex-direction: row;">
-                    <button onclick="changeLocation(-1)">&lt;</button>
-                            <p id="chapelName" style="text-align: center; margin :10px; min-width: 50%;">Igreja Nossa Senhora do Perpétuo Socorro e<br>São Judas Tadeu</p>
-                            <button onclick="changeLocation(1)">></button>
-                </div>
-            </div>
-            <!--#include virtual="programação"-->
-        </div>
+        <main class="locations-content">
+            <header class="locations-heading">
+                <p class="locations-eyebrow">Onde estamos</p>
+                <h1>Igrejas e capelas</h1>
+                <p>Encontre nossas igrejas, capelas e informações de localização.</p>
+            </header>
+
+            <ol id="locationList" class="location-list" aria-label="Lista de igrejas e capelas"></ol>
+
+        </main>
     </div>
     <!--#include virtual="footer" -->
 </body>
