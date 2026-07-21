@@ -6,9 +6,10 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>N. Sra. do P. Socorro</title>
     <link rel="stylesheet" href="/src/styles/general.css">
+    <link rel="stylesheet" href="/src/styles/components.css">
     <link rel="stylesheet" href="/html_components/carrossel/carrosel_styles.css">
     <link rel="stylesheet" href="video.css">
-    <script type="module" src="/src/scripts/index.js"></script>
+    <script type="module" src="/src/scripts/components.js"></script>
     <link rel="stylesheet" href="/TestEnvironment/home.css" />
 
 </head>
@@ -23,60 +24,7 @@
 </script>
 <body>
     <div class="wrapper">
-        <header>
-    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
-
-    <div class="topHeader">
-        <div class="iconetopo">
-                    <img src="/src/images/nossa_senhora_perpetuoSOC.jpg" alt="Nossa Senhora do Perpétuo Socorro">
-        </div>
-        <h2 class="headerTitle">Igreja Nossa Senhora do<br>Perpétuo Socorro e<br>São Judas Tadeu</h2>
-    </div>
-    
-    <div class="bottonHeader">
-        <div>
-        <a href="https://diocesedenovaiguacu.org.br/"><img src="/src/images/D_NI_Brasao.png" alt=""></a>
-            <p>Diocese de Nova Iguaçu</p>
-        </div>
-        <p class="centerText">Missa na forma<br>antiga do<br>Rito Romano</p>
-        <div>
-        <a href="https://adapostolica.org/"><img src="/src/images/AdmApos.png" alt=""></a>
-            <p>Administração Apostolica<br>São João Maria Vianney</p>
-        </div>
-    </div>
-    <div class="topButtons">
-        <a href="/"><button>Início</button></a>
-        <a href="/capelas.html"><button>Capelas e Horários</button></a>
-        <a href="/noticias"><button>Notícias e Eventos</button></a>
-        <div class="dropdown">
-            <a href="/midias"><button class="dropbtn">Mídias</button></a>
-            <div class="dropdown-content">
-            <a href="/galerias.html"><button>Galerias</button></a>
-            <a href="/homilias.html"><button>Homilias</button></a>
-            <a href="/cartas.html"><button>Cartas e Artigos</button></a>
-            <a href="/artigos.html"><button>Vídeos</button></a>
-            </div>
-        </div>
-        <a href="/doacoes.html"><button>Doações</button></a>
-        <a href="/contato.html"><button>Contato</button></a>
-    </div>
-    <div class="sidebar">
-        <span class="close-btn" onclick="toggleSidebar()" style="position: absolute;
-    font-size: 28px;
-    right: 25px;
-    top: 5%;
-    color: var(--branco);">×</span>
-        <ul>
-            <li><a href="/" onclick="toggleSidebar()">Inicio</a></li>
-            <li><a href="/capelas" onclick="toggleSidebar()">Capelas e Horários</a></li>
-            <li><a href="/noticias" onclick="toggleSidebar()">Notícias e Eventos</a></li>
-            <li><a href="/midias" onclick="toggleSidebar()">Mídias</a></li>
-            <li><a href="/doacoes.html" onclick="toggleSidebar()">Doações</a></li>
-            <li><a href="/contato.html" onclick="toggleSidebar()">Contato</a></li>
-        </ul>
-    </div>
-    <img src="/src/images/desenho-ornamental.png" alt="arabesco" class="header-arabesco">
-</header>
+        <div id="site-header"></div>
         <div class="mainContent">
             <h1 class="video-title">Vídeo não encontrado</h1>
             <hr>
@@ -96,7 +44,7 @@
         </div>
         </div>
     </div>
-    <footer>© 2025 Associação Civil Nossa Senhora do Perpétuo Socorro.<br>Todos os direitos reservados</footer>
+    <div id="site-footer"></div>
     <script src="video.js"></script>
 
 </body>

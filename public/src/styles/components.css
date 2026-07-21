@@ -1,0 +1,257 @@
+.site-header {
+    gap: 0;
+    overflow-x: clip;
+    background: #fffdf9;
+}
+
+.site-header .rite-bar {
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.35rem 1rem;
+    background: #3e0d0b;
+    color: #fff;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.site-header .topHeader {
+    display: flex;
+    width: min(1180px, 100%);
+    min-height: 88px;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0.6rem 1.5rem;
+}
+
+.site-header .site-brand {
+    display: flex;
+    min-width: 0;
+    flex: 0 1 430px;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.site-header .iconetopo {
+    width: 62px;
+    height: 68px;
+    flex: 0 0 62px;
+}
+
+.site-header .iconetopo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mask-image: none;
+}
+
+.site-header .headerTitle {
+    width: auto;
+    max-width: 340px;
+    margin: 0;
+    color: #5b0f14;
+    font-family: "Cormorant", "Times New Roman", serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-transform: none;
+}
+
+.site-header .topButtons {
+    display: flex;
+    width: auto;
+    flex: 0 0 auto;
+    gap: 0.1rem;
+    justify-content: flex-end;
+    margin-left: auto;
+    border: 0;
+    background: #fffdf9;
+}
+
+.site-header .topButtons a {
+    width: auto;
+    min-height: 42px;
+    flex: none;
+    box-sizing: border-box;
+    padding: 0.7rem 0.8rem;
+    background: transparent;
+    color: #3e0d0b;
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.site-header .topButtons a:hover,
+.site-header .topButtons a[aria-current="page"] {
+    background: #f7f3ec;
+    color: #5b0f14;
+}
+
+.site-header .topButtons a[aria-current="page"] {
+    box-shadow: inset 0 -2px #5b0f14;
+}
+
+.site-header .menu-icon,
+.site-header .sidebar {
+    background: #5b0f14;
+}
+
+.site-header .menu-icon {
+    border: 0;
+}
+
+.site-header .close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 44px;
+    min-height: 44px;
+    flex: none;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 1.75rem;
+}
+
+.site-header .menu-icon:focus-visible,
+.site-header .close-btn:focus-visible,
+.site-header a:focus-visible {
+    outline: 3px solid #b88a32;
+    outline-offset: 2px;
+}
+
+.site-footer {
+    display: grid;
+    width: 100%;
+    min-height: 90px;
+    height: auto;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    background: #3e0d0b;
+    color: #fff;
+    text-align: left;
+}
+
+.site-footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer-copyright {
+    grid-column: 1 / -1;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 0;
+    }
+
+    .site-header {
+        position: relative;
+    }
+
+    .site-header .topHeader {
+        min-height: 82px;
+        padding: 0.55rem 4.5rem 0.55rem 1rem;
+    }
+
+    .site-header .site-brand {
+        flex-basis: auto;
+    }
+
+    .site-header .iconetopo {
+        width: 54px;
+        height: 60px;
+        flex-basis: 54px;
+    }
+
+    .site-header .headerTitle {
+        max-width: none;
+        font-size: 1.2rem;
+    }
+
+    .site-header .topButtons {
+        display: none;
+    }
+
+    .site-header .menu-icon {
+        display: grid;
+        position: absolute;
+        z-index: 1000;
+        top: 2.15rem;
+        right: 1rem;
+        left: auto;
+        width: 44px;
+        min-height: 44px;
+        place-items: center;
+        padding: 0;
+        color: #fff;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header .rite-bar {
+        padding-inline: 3.75rem;
+        font-size: 0.7rem;
+    }
+
+    .site-header .topHeader {
+        min-height: 76px;
+        padding-right: 3.9rem;
+        padding-left: 0.75rem;
+    }
+
+    .site-header .site-brand {
+        gap: 0.55rem;
+    }
+
+    .site-header .iconetopo {
+        width: 46px;
+        height: 54px;
+        flex-basis: 46px;
+    }
+
+    .site-header .headerTitle {
+        font-size: 0.98rem;
+        line-height: 1.04;
+    }
+
+    .site-header .menu-icon {
+        right: 0.65rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .site-footer-copyright {
+        grid-column: auto;
+    }
+}

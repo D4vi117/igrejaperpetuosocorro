@@ -1,23 +1,35 @@
-const sidebar = document.querySelector(".sidebar");
-const menuButton = document.querySelector(".menu-icon");
+export function initializeNavigation(header) {
+    const sidebar = header.querySelector(".sidebar");
+    const menuButton = header.querySelector(".menu-icon");
+    const closeButton = header.querySelector(".close-btn");
+    const sidebarLinks = sidebar?.querySelectorAll("a") ?? [];
 
-function setSidebarOpen(isOpen) {
-    if (!sidebar) {
+    if (!sidebar || !menuButton) {
         return;
     }
 
-    sidebar.classList.toggle("active", isOpen);
-    menuButton?.setAttribute("aria-expanded", String(isOpen));
-}
+    function setSidebarOpen(isOpen, returnFocus = false) {
+        sidebar.classList.toggle("active", isOpen);
+        sidebar.setAttribute("aria-hidden", String(!isOpen));
+        sidebar.inert = !isOpen;
+        menuButton.setAttribute("aria-expanded", String(isOpen));
 
-function toggleSidebar() {
-    setSidebarOpen(!sidebar?.classList.contains("active"));
-}
-
-window.toggleSidebar = toggleSidebar;
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        setSidebarOpen(false);
+        if (isOpen) {
+            closeButton?.focus();
+        } else if (returnFocus) {
+            menuButton.focus();
+        }
     }
-});
+
+    menuButton.addEventListener("click", () => setSidebarOpen(true));
+    closeButton?.addEventListener("click", () => setSidebarOpen(false, true));
+    sidebarLinks.forEach((link) => {
+        link.addEventListener("click", () => setSidebarOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            setSidebarOpen(false, true);
+        }
+    });
+}

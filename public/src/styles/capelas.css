@@ -1,7 +1,133 @@
+.locations-page {
+    background: #f7f3ec;
+    color: #2a201c;
+}
+
+.locations-page .wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    background: #fffdf9;
+}
+
+.locations-page .wrapper > header {
+    gap: 0;
+    background: #fffdf9;
+}
+
+.locations-page .rite-bar {
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1rem;
+    background: #3e0d0b;
+    color: #fff;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.locations-page .topHeader {
+    max-width: 1180px;
+    min-height: 105px;
+    margin: auto;
+    padding: 0.75rem 1.5rem;
+}
+
+.locations-page .iconetopo {
+    width: 72px;
+    height: 78px;
+    flex: 0 0 72px;
+}
+
+.locations-page .iconetopo img {
+    object-fit: contain;
+    mask-image: none;
+}
+
+.locations-page .headerTitle {
+    width: auto;
+    margin: 0 0 0 1rem;
+    color: #5b0f14;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-transform: none;
+}
+
+.locations-page .apostolic-identity {
+    display: inline-flex;
+    width: 54px;
+    height: 62px;
+    flex: 0 0 54px;
+    margin-left: 1.25rem;
+}
+
+.locations-page .apostolic-identity img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.locations-page .topButtons {
+    width: auto;
+    flex: 0 1 auto;
+    gap: 0.15rem;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    background: #fffdf9;
+}
+
+.locations-page .topButtons a {
+    width: auto;
+    min-height: 44px;
+    flex: none;
+    box-sizing: border-box;
+    padding: 0.75rem 0.85rem;
+    background: transparent;
+    color: #3e0d0b;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.locations-page .topButtons a:hover,
+.locations-page .topButtons a[aria-current="page"] {
+    background: #f7f3ec;
+    color: #5b0f14;
+}
+
+.locations-page .topButtons a[aria-current="page"] {
+    box-shadow: inset 0 -2px #5b0f14;
+}
+
+.locations-page .menu-icon {
+    background: #5b0f14;
+}
+
+.locations-page .sidebar {
+    background: #5b0f14;
+}
+
+.locations-page footer {
+    background: #5b0f14;
+}
+
 .locations-content {
+    --location-wine: #5b0f14;
+    --location-wine-hover: #761a21;
+    --location-gold: #b88a32;
+    --location-cream: #f7f3ec;
+    --location-paper: #fffdf9;
+    --location-text: #2a201c;
+    --location-muted: #655a54;
+    --location-border: #ded3c6;
     box-sizing: border-box;
     width: 100%;
     padding: 2.5rem clamp(1rem, 4vw, 3rem) 3rem;
+    background: var(--location-cream);
+    color: var(--location-text);
 }
 
 .locations-heading {
@@ -15,14 +141,14 @@
 }
 
 .locations-heading h1 {
-    color: var(--verde-escuro);
+    color: var(--location-wine);
     font-family: "Cormorant", "Times New Roman", serif;
     font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .locations-heading .locations-eyebrow {
     margin-bottom: 0.35rem;
-    color: var(--cinza-medio);
+    color: var(--location-muted);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -46,14 +172,14 @@
     grid-template-columns: minmax(130px, 0.85fr) minmax(180px, 1.35fr) minmax(190px, 1fr);
     gap: 1rem;
     padding: 0.75rem;
-    border: 1px solid var(--cinza-claro);
-    background: var(--branco);
+    border: 1px solid var(--location-border);
+    background: var(--location-paper);
 }
 
 .location-card-media {
     min-height: 150px;
     overflow: hidden;
-    background: var(--cinza-claro);
+    background: var(--location-border);
 }
 
 .location-card-media img {
@@ -65,7 +191,7 @@
 .location-card-media.is-placeholder {
     display: grid;
     place-items: center;
-    color: var(--cinza-medio);
+    color: var(--location-muted);
     font-size: 0.85rem;
 }
 
@@ -96,15 +222,15 @@
     flex: 0 0 1.5rem;
     place-items: center;
     border-radius: 50%;
-    background: var(--verde-escuro);
-    color: var(--branco);
+    background: var(--location-wine);
+    color: #fff;
     font-size: 0.8rem;
     font-weight: 700;
 }
 
 .location-card address {
     margin: 0.75rem 0 1rem 2.15rem;
-    color: var(--cinza-medio);
+    color: var(--location-muted);
     font-size: 0.9rem;
     font-style: normal;
     line-height: 1.4;
@@ -116,7 +242,7 @@
     min-height: 40px;
     flex: none;
     padding: 0.6rem 0.85rem;
-    border: 1px solid var(--verde-escuro);
+    border: 1px solid var(--location-wine);
     font-size: 0.85rem;
     text-align: center;
     text-decoration: none;
@@ -125,8 +251,13 @@
 .open-maps-link {
     display: inline-flex;
     align-items: center;
-    background: var(--branco);
-    color: var(--verde-escuro);
+    background: var(--location-paper);
+    color: var(--location-wine);
+}
+
+.open-maps-link:hover {
+    background: var(--location-wine-hover);
+    color: #fff;
 }
 
 .open-maps-link:focus-visible {
@@ -141,6 +272,30 @@
 
     .location-card-map {
         grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .locations-page .topHeader {
+        min-height: 88px;
+        padding-inline: 1rem;
+    }
+
+    .locations-page .iconetopo {
+        width: 56px;
+        height: 62px;
+        flex-basis: 56px;
+    }
+
+    .locations-page .headerTitle {
+        font-size: 1.15rem;
+    }
+
+    .locations-page .apostolic-identity {
+        width: 42px;
+        height: 48px;
+        flex-basis: 42px;
+        margin-left: auto;
     }
 }
 
