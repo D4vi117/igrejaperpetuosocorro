@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/styles/general.css">
     <link rel="stylesheet" href="/src/styles/components.css">
     <link rel="stylesheet" href="/src/styles/search.css">
+    <link rel="stylesheet" href="/src/styles/site-pages.css">
     <script type="module" src="/src/scripts/components.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -25,7 +26,8 @@
     height: 40px;
     padding: 0;
     border: 1px solid #ccc;
-    background: #cfcfcf;
+    background: #fffdf9;
+    color: #5b0f14;
     cursor: pointer;
 
     display: flex;
@@ -34,7 +36,7 @@
 }
 
 .pagination button.ativo {
-    background: #333;
+    background: #5b0f14;
     color: #fff;
     font-weight: bold;
 }
@@ -92,14 +94,15 @@
 
   gtag('config', 'G-SEEY60KWY8');
 </script>
-<body>
+<body class="site-template media-page">
     <div class="wrapper">
         <div id="site-header"></div>
 
-            <div class="topContent" style="justify-self: center; text-align:center;">
+        <main class="page-content">
+            <header class="page-heading">
                 <h1>Buscar por notícias</h1>
                 <p>Encontre galerias de fotos, homilias, artigos e muito mais.</p>
-            </div>
+            </header>
         <form id="formBusca" method="GET" action="buscar.php">
             <input type="text" name="busca" placeholder="Buscar por título, conteúdo ou tags..." />
             <select name="tipo">
@@ -119,12 +122,10 @@
         </form>
             <div id="mainContent" style="border-style: none; overflow: hidden; padding: 30px;">
                 <h1 style="text-align: center; margin-bottom: 30px;">Resultados da Busca</h1>
-                <ul class="news-list">
-                    <div id="resultadosBusca"></div>
-                    <div id="paginacao" class="pagination"></div>
-                </ul>
+                <ul id="resultadosBusca" class="news-list"></ul>
+                <div id="paginacao" class="pagination"></div>
             </div>
-        </div>
+        </main>
     </div>
     <script src="midia.js"></script>
     

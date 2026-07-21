@@ -8,6 +8,7 @@
     --page-muted: #655a54;
     background: var(--page-cream);
     color: var(--page-text);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .error-page .wrapper {

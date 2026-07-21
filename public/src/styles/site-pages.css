@@ -1,0 +1,106 @@
+.site-template {
+    --site-wine: #5b0f14;
+    --site-wine-dark: #3e0d0b;
+    --site-wine-hover: #761a21;
+    --site-gold: #b88a32;
+    --site-paper: #fffdf9;
+    --site-cream: #f7f3ec;
+    --site-ink: #2a201c;
+    --site-muted: #655a54;
+    --site-border: #ded3c6;
+    width: 100%;
+    padding: 0;
+    background: var(--site-cream);
+    color: var(--site-ink);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-template .wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    background: var(--site-paper);
+}
+
+.site-template .page-content {
+    width: min(1080px, calc(100% - 2rem));
+    min-height: 30vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+}
+
+.site-template .page-heading {
+    margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+}
+
+.site-template .page-heading h1,
+.site-template .page-content > h1,
+.site-template article > h1 {
+    margin: 0;
+    color: var(--site-wine-dark);
+    font-family: "Cormorant", "Times New Roman", serif;
+    font-size: clamp(2.25rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.site-template .page-heading p {
+    margin: 0.75rem 0 0;
+    color: var(--site-muted);
+    line-height: 1.55;
+}
+
+.site-template button,
+.site-template input,
+.site-template select {
+    min-height: 44px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.site-template button {
+    border: 1px solid var(--site-wine);
+    background: var(--site-wine);
+    color: #fff;
+}
+
+.site-template button:hover {
+    background: var(--site-wine-hover);
+}
+
+.site-template button:focus-visible,
+.site-template input:focus-visible,
+.site-template select:focus-visible,
+.site-template main a:focus-visible {
+    outline: 3px solid var(--site-gold);
+    outline-offset: 3px;
+}
+
+.media-page form {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.media-page form input {
+    min-width: min(100%, 280px);
+    flex: 1 1 280px;
+}
+
+.media-page form select {
+    flex: 0 1 auto;
+}
+
+@media (max-width: 768px) {
+    .site-template .page-content {
+        padding-block: 2.5rem;
+    }
+
+    .media-page form input,
+    .media-page form select,
+    .media-page form button {
+        width: 100%;
+    }
+}

@@ -1,6 +1,7 @@
 .locations-page {
     background: #f7f3ec;
     color: #2a201c;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .locations-page .wrapper {
@@ -124,7 +125,8 @@
     --location-muted: #655a54;
     --location-border: #ded3c6;
     box-sizing: border-box;
-    width: 100%;
+    width: min(1080px, 100%);
+    margin: 0 auto;
     padding: 2.5rem clamp(1rem, 4vw, 3rem) 3rem;
     background: var(--location-cream);
     color: var(--location-text);
