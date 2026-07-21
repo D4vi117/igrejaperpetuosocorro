@@ -253,16 +253,18 @@ body {
 .history-section {
     display: grid;
     width: min(1080px, calc(100% - 2rem));
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: clamp(2rem, 6vw, 5rem);
-    align-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: start;
     margin: 5rem auto;
 }
 
 .history-section > img {
+    display: block;
     width: 100%;
-    max-height: 440px;
+    aspect-ratio: 16 / 10;
     object-fit: cover;
+    object-position: center 42%;
 }
 
 .history-section h2,
@@ -282,11 +284,11 @@ body {
 
 .events-section {
     width: min(1080px, calc(100% - 2rem));
-    margin: 5rem auto;
+    margin: 3.5rem auto;
 }
 
-.section-heading {
-    margin-bottom: 1.5rem;
+.events-section .section-heading {
+    margin-bottom: 0.85rem;
     text-align: center;
 }
 
@@ -299,10 +301,11 @@ body {
 .events-empty {
     grid-column: 1 / -1;
     margin: 0;
-    padding: 1.5rem;
+    padding: 1rem;
     border-top: 1px solid var(--home-border);
     border-bottom: 1px solid var(--home-border);
     color: var(--home-ink);
+    line-height: 1.5;
     text-align: center;
 }
 
@@ -325,12 +328,12 @@ body {
 .donation-section {
     display: grid;
     width: min(1080px, calc(100% - 2rem));
-    min-height: 330px;
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
     align-items: center;
     box-sizing: border-box;
     margin: 4rem auto;
-    padding: clamp(2rem, 5vw, 4rem);
+    padding: clamp(1.75rem, 4vw, 3rem);
     overflow: hidden;
     background: #ead7b8;
 }
@@ -346,11 +349,13 @@ body {
 }
 
 .donation-section > img {
+    display: block;
     width: 100%;
-    max-height: 370px;
-    align-self: end;
+    max-width: 390px;
+    max-height: 340px;
+    justify-self: end;
     object-fit: contain;
-    object-position: bottom;
+    object-position: center;
 }
 
 .home-footer {
@@ -431,20 +436,24 @@ body {
     }
 
     .history-section {
+        gap: 1.5rem;
         margin-block: 3rem;
-    }
-
-    .history-section > img {
-        max-height: 320px;
     }
 
     .events-list {
         grid-template-columns: 1fr;
     }
 
+    .donation-section {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
     .donation-section > img {
-        max-width: 300px;
-        margin: 2rem auto -4rem;
+        width: min(100%, 280px);
+        max-height: none;
+        justify-self: center;
+        margin: 0 auto;
     }
 
     .home-footer {
