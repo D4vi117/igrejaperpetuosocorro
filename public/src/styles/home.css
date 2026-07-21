@@ -215,7 +215,7 @@ body {
     width: min(1180px, calc(100% - 2rem));
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    margin: -1.5rem auto 0;
+    margin: 0 auto;
     border: 1px solid var(--home-border);
     background: var(--home-border);
 }
