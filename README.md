@@ -162,6 +162,16 @@ Não adicione credenciais, arquivos de conta de serviço ou variáveis de ambien
 - Testar desktop e mobile antes de enviar alterações;
 - Não incluir segredos ou dados sensíveis em commits.
 
+## Teste local
+
+Para iniciar o ambiente de desenvolvimento local (Hosting, Functions, Firestore, etc.), execute:
+
+```bash
+firebase emulators:start
+```
+
+Após a inicialização, os serviços estarão disponíveis localmente e todas as alterações poderão ser testadas sem afetar o ambiente de produção.
+
 ## Deploy
 
 O deploy modifica o ambiente remoto e deve ser executado somente por uma pessoa autorizada, após revisão das alterações.
