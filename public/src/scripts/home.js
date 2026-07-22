@@ -1,42 +1,35 @@
+const eventsList = document.getElementById("eventsList");
 
-let currentSlide = 0;
-const slides = document.querySelector('.carrossel .slides');
-const totalSlides = document.querySelectorAll('.carrossel .slide').length;
-const dotsContainer = document.querySelector('.carrossel-dots');
-let autoSlideInterval;
+function createEventCard(event) {
+    const article = document.createElement("article");
+    const title = document.createElement("h3");
+    const date = document.createElement("time");
+    const description = document.createElement("p");
 
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
+    article.className = "event-card";
+    title.textContent = event.title;
+    date.dateTime = event.date;
+    date.textContent = event.displayDate;
+    description.textContent = event.description;
+    article.append(title, date, description);
+    return article;
 }
 
-function updateDots() {
-    const dots = document.querySelectorAll('.carrossel-dots .dot');
-    dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentSlide);
-    });
+function renderUpcomingEvents(upcomingEvents) {
+    if (!eventsList) {
+        return;
+    }
+
+    if (upcomingEvents.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.className = "events-empty";
+        emptyMessage.textContent = "Em breve, novas atividades serão divulgadas.";
+        eventsList.replaceChildren(emptyMessage);
+        return;
+    }
+
+    const cards = upcomingEvents.slice(0, 3).map(createEventCard);
+    eventsList.replaceChildren(...cards);
 }
 
-function moveSlide(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    updateDots();
-    resetAutoSlide();
-}
-
-function goToSlide(index) {
-    currentSlide = index;
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    updateDots();
-    resetAutoSlide();
-}
-
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(() => moveSlide(1), 3000);
-}
-
-autoSlideInterval = setInterval(() => moveSlide(1), 3000);
-updateDots();
+renderUpcomingEvents([]);

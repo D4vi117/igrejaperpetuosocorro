@@ -1,0 +1,42 @@
+export const locations = Object.freeze([
+    {
+        id: "perpetuo-socorro",
+        name: "Igreja Nossa Senhora do Perpétuo Socorro e São Judas Tadeu",
+        address: "Rua Taubaté, 12 - Rodilândia, Nova Iguaçu - RJ, 26083-070",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Rua%20Taubat%C3%A9%2C%2012%20-%20Rodil%C3%A2ndia%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026083-070",
+        imageUrl: "/src/images/Fachada.webp",
+        embedMapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7359.392192912678!2d-43.501861!3d-22.7395344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995d7557630609%3A0xbb628aee99177a10!2sIgreja%20Nossa%20Senhora%20do%20Perp%C3%A9tuo%20Socorro%20e%20S%C3%A3o%20Judas%20Tadeu!5e0!3m2!1spt-BR!2sbr!4v1737036550216!5m2!1spt-BR!2sbr",
+    },
+    {
+        id: "sao-jose",
+        name: "Igreja de São José",
+        address: "Rua Teixeiras, 31 - Caiçara, Nova Iguaçu - RJ, 26083-180",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Rua%20Teixeiras%2C%2031%20-%20Cai%C3%A7ara%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026083-180",
+        imageUrl: null,
+        embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.293240000461!2d-43.5144267471217!3d-22.741372436865497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995d636af8b1fb%3A0x6369a9624ff0d93f!2zQ2FwZWxhIGRlIFPDo28gSm9zw6k!5e0!3m2!1spt-BR!2sbr!4v1737037043892!5m2!1spt-BR!2sbr",
+    },
+    {
+        id: "nossa-senhora-de-lourdes",
+        name: "Capela de Nossa Senhora de Lourdes e São Pio de Pietrelcina",
+        address: "Rua Deolinda de Freitas Rodrigues, 353 - Riachão, Nova Iguaçu - RJ, 26279-230",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Rua%20Deolinda%20de%20Freitas%20Rodrigues%2C%20353%20-%20Riach%C3%A3o%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026279-230",
+        imageUrl: null,
+        embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.3973817337223!2d-43.520835688701666!3d-22.75062943222353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995db74b7f532d%3A0x1455998858f89fc5!2sCapela%20de%20Nossa%20Senhora%20de%20Lourdes%20e%20S%C3%A3o%20Pio%20de%20Pietrelcina%20(Administra%C3%A7%C3%A3o%20Apost%C3%B3lica)!5e0!3m2!1spt-BR!2sbr!4v1737046565575!5m2!1spt-BR!2sbr",
+    },
+    {
+        id: "nossa-senhora-das-gracas",
+        name: "Igreja Nossa Senhora das Graças e São Sebastião",
+        address: "Rua B, Estrada da Palhada, 31 - Jardim Palmares, Nova Iguaçu - RJ, 26277-410",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Rua%20B%2C%20Estrada%20da%20Palhada%2C%2031%20-%20Jardim%20Palmares%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026277-410",
+        imageUrl: null,
+        embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.85787571496!2d-43.518153!3d-22.770655100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995dd5db69737d%3A0xf7cb58b10094dbb6!2sCapela%20Nossa%20Senhora%20das%20Gra%C3%A7as%20e%20S%C3%A3o%20Sebasti%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1737046675188!5m2!1spt-BR!2sbr",
+    },
+    {
+        id: "nossa-senhora-do-rosario",
+        name: "Capela de Nossa Senhora do Rosário",
+        address: "Rua Escada, 159 - Jardim Pernambuco, Nova Iguaçu - RJ, 26275-450",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Rua%20Escada%2C%20159%20-%20Jardim%20Pernambuco%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026275-450",
+        imageUrl: null,
+        embedMapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1733.3946951466103!2d-43.49837256390353!3d-22.751644691232197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995d007848c167%3A0xe0dae657a4efc768!2sCapela%20de%20Nossa%20Senhora%20do%20Ros%C3%A1rio!5e0!3m2!1spt-BR!2sbr!4v1737047701373!5m2!1spt-BR!2sbr",
+    },
+]);

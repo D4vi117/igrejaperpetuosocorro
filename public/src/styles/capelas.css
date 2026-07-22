@@ -1,100 +1,320 @@
-
-.container {
-    width: 80%;
-    max-width: 600px;
+.locations-page {
+    background: #f7f3ec;
+    color: #2a201c;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.content {
-    height: 800px;
-    overflow-y: auto;
-}
-
-    .day {
-        margin-bottom: 16px;
-    }
-    .day h3 {
-        margin: 0 0 8px;
-        font-size: 1.2rem;
-        color: #333;
-    }
-    .day ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .day ul li {
-        margin: 4px 0;
-        padding: 8px;
-        background: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-.capelas-selector {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.locations-page .wrapper {
     width: 100%;
-    height: 84px;
-}
-
-.nav-btn {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0; /* ISSO É CRUCIAL */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 8px;
-
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-
-.capela-nome {
-    flex: 1;                 /* ocupa o espaço do meio */
-    max-width: 600px;        /* trava expansão */
-    text-align: center;
-    padding: 0 1rem;
-}
-.capelas-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
-}
-
-.capelas-mapa {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.capelas-mapa iframe {
-    width: 100%;
-    height: 450px;
+    max-width: none;
+    margin: 0;
     border: 0;
-    border-radius: 8px;
+    background: #fffdf9;
 }
 
-
-.nav-btn:hover {
-    opacity: 0.85;
+.locations-page .wrapper > header {
+    gap: 0;
+    background: #fffdf9;
 }
 
+.locations-page .rite-bar {
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1rem;
+    background: #3e0d0b;
+    color: #fff;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.locations-page .topHeader {
+    max-width: 1180px;
+    min-height: 105px;
+    margin: auto;
+    padding: 0.75rem 1.5rem;
+}
+
+.locations-page .iconetopo {
+    width: 72px;
+    height: 78px;
+    flex: 0 0 72px;
+}
+
+.locations-page .iconetopo img {
+    object-fit: contain;
+    mask-image: none;
+}
+
+.locations-page .headerTitle {
+    width: auto;
+    margin: 0 0 0 1rem;
+    color: #5b0f14;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-transform: none;
+}
+
+.locations-page .apostolic-identity {
+    display: inline-flex;
+    width: 54px;
+    height: 62px;
+    flex: 0 0 54px;
+    margin-left: 1.25rem;
+}
+
+.locations-page .apostolic-identity img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.locations-page .topButtons {
+    width: auto;
+    flex: 0 1 auto;
+    gap: 0.15rem;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    background: #fffdf9;
+}
+
+.locations-page .topButtons a {
+    width: auto;
+    min-height: 44px;
+    flex: none;
+    box-sizing: border-box;
+    padding: 0.75rem 0.85rem;
+    background: transparent;
+    color: #3e0d0b;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.locations-page .topButtons a:hover,
+.locations-page .topButtons a[aria-current="page"] {
+    background: #f7f3ec;
+    color: #5b0f14;
+}
+
+.locations-page .topButtons a[aria-current="page"] {
+    box-shadow: inset 0 -2px #5b0f14;
+}
+
+.locations-page .menu-icon {
+    background: #5b0f14;
+}
+
+.locations-page .sidebar {
+    background: #5b0f14;
+}
+
+.locations-page footer {
+    background: #5b0f14;
+}
+
+.locations-content {
+    --location-wine: #5b0f14;
+    --location-wine-hover: #761a21;
+    --location-gold: #b88a32;
+    --location-cream: #f7f3ec;
+    --location-paper: #fffdf9;
+    --location-text: #2a201c;
+    --location-muted: #655a54;
+    --location-border: #ded3c6;
+    box-sizing: border-box;
+    width: min(1080px, 100%);
+    margin: 0 auto;
+    padding: 2.5rem clamp(1rem, 4vw, 3rem) 3rem;
+    background: var(--location-cream);
+    color: var(--location-text);
+}
+
+.locations-heading {
+    gap: 0;
+    margin-bottom: 2rem;
+}
+
+.locations-heading h1,
+.locations-heading p {
+    margin: 0;
+}
+
+.locations-heading h1 {
+    color: var(--location-wine);
+    font-family: "Cormorant", "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.locations-heading .locations-eyebrow {
+    margin-bottom: 0.35rem;
+    color: var(--location-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.locations-heading h1 + p {
+    margin-top: 0.5rem;
+}
+
+.location-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.location-card {
+    display: grid;
+    grid-template-columns: minmax(130px, 0.85fr) minmax(180px, 1.35fr) minmax(190px, 1fr);
+    gap: 1rem;
+    padding: 0.75rem;
+    border: 1px solid var(--location-border);
+    background: var(--location-paper);
+}
+
+.location-card-media {
+    min-height: 150px;
+    overflow: hidden;
+    background: var(--location-border);
+}
+
+.location-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-card-media.is-placeholder {
+    display: grid;
+    place-items: center;
+    color: var(--location-muted);
+    font-size: 0.85rem;
+}
+
+.location-card-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.location-card-title {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+}
+
+.location-card-title h2 {
+    margin: 0;
+    font-family: "Cormorant", "Times New Roman", serif;
+    font-size: 1.3rem;
+    line-height: 1.15;
+}
+
+.location-number {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: 0 0 1.5rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--location-wine);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.location-card address {
+    margin: 0.75rem 0 1rem 2.15rem;
+    color: var(--location-muted);
+    font-size: 0.9rem;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.open-maps-link {
+    box-sizing: border-box;
+    width: auto;
+    min-height: 40px;
+    flex: none;
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--location-wine);
+    font-size: 0.85rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.open-maps-link {
+    display: inline-flex;
+    align-items: center;
+    background: var(--location-paper);
+    color: var(--location-wine);
+}
+
+.open-maps-link:hover {
+    background: var(--location-wine-hover);
+    color: #fff;
+}
+
+.open-maps-link:focus-visible {
+    outline: 3px solid var(--azul-claro);
+    outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+    .location-card {
+        grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.5fr);
+    }
+
+    .location-card-map {
+        grid-column: 1 / -1;
+    }
+}
 
 @media (max-width: 768px) {
-    
-    .capela-nome {
-        flex: none;
-        width: 60%;
+    .locations-page .topHeader {
+        min-height: 88px;
+        padding-inline: 1rem;
     }
-    .capelas-mapa iframe {
-        height: 300px;
+
+    .locations-page .iconetopo {
+        width: 56px;
+        height: 62px;
+        flex-basis: 56px;
+    }
+
+    .locations-page .headerTitle {
+        font-size: 1.15rem;
+    }
+
+    .locations-page .apostolic-identity {
+        width: 42px;
+        height: 48px;
+        flex-basis: 42px;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .locations-content {
+        padding-inline: 0.75rem;
+    }
+
+    .location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .location-card-media {
+        min-height: 190px;
+    }
+
+    .location-card address {
+        margin-left: 0;
     }
 }

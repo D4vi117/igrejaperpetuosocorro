@@ -1,105 +1,228 @@
+.donations-page {
+    --page-wine: #5b0f14;
+    --page-wine-hover: #761a21;
+    --page-gold: #b88a32;
+    --page-cream: #f7f3ec;
+    --page-paper: #fffdf9;
+    --page-text: #2a201c;
+    --page-muted: #655a54;
+    --page-border: #ded3c6;
+    background: var(--page-cream);
+    color: var(--page-text);
+}
 
-        h3 {
-            font-size: 24px;
-            color: #416C26;
-            margin-bottom: 10px;
-        }
-        u {
-            text-decoration: underline;
-        }
+.donations-page .wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    background: var(--page-paper);
+}
 
-        b {
-            font-weight: bold;
-        }
+.donations-page .wrapper > header {
+    gap: 0;
+    background: var(--page-paper);
+}
 
-        .doacao-container {
-            margin-top: 20px;
+.donations-page .rite-bar {
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1rem;
+    background: #3e0d0b;
+    color: #fff;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
 
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center; /* Coloca os itens lado a lado */
-            margin-bottom: 20px;
-        }
+.donations-page .topHeader {
+    max-width: 1180px;
+    min-height: 105px;
+    margin: auto;
+    padding: 0.75rem 1.5rem;
+}
 
-        .doacao-container p {
+.donations-page .iconetopo {
+    width: 72px;
+    height: 78px;
+    flex: 0 0 72px;
+}
 
-            margin-bottom: 10px;
-            flex: 1;
-        }
+.donations-page .iconetopo img {
+    object-fit: contain;
+    mask-image: none;
+}
 
-        .qrcode-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            flex-shrink: 0; /* Impede que o QR code encolha */
-        }
+.donations-page .headerTitle {
+    width: auto;
+    margin: 0 0 0 1rem;
+    color: var(--page-wine);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-transform: none;
+}
 
-        .qrcode-container img {
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+.donations-page .apostolic-identity {
+    display: inline-flex;
+    width: 54px;
+    height: 62px;
+    flex: 0 0 54px;
+    margin-left: 1.25rem;
+}
 
-        .contact-info {
-            font-size: 16px;
-            color: #555;
-        }
+.donations-page .apostolic-identity img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-        .contact-info b {
-            font-size: 18px;
-            color: #416C26;
-        }
+.donations-page .topButtons {
+    width: auto;
+    flex: 0 1 auto;
+    gap: 0.15rem;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    background: var(--page-paper);
+}
 
-        /* Estilo para o botão de copiar */
-        .copyButton {
-            background-color: #416C26;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
+.donations-page .topButtons a {
+    width: auto;
+    min-height: 44px;
+    flex: none;
+    box-sizing: border-box;
+    padding: 0.75rem 0.85rem;
+    background: transparent;
+    color: #3e0d0b;
+    font-family: inherit;
+    text-decoration: none;
+}
 
-        .copyButton:hover {
-            background-color: #355d1c;
-        }
+.donations-page .topButtons a:hover,
+.donations-page .topButtons a[aria-current="page"] {
+    background: var(--page-cream);
+    color: var(--page-wine);
+}
 
-        .pix-code {
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-            padding: 10px;
-            font-family: monospace;
-            font-size: 14px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 15px;
-            word-wrap: break-word;
-        }
+.donations-page .topButtons a[aria-current="page"] {
+    box-shadow: inset 0 -2px var(--page-wine);
+}
 
-        @media (max-width: 768px) {
-            h3 {
-                font-size: 20px;
-            }
-            .doacao-container p, .contact-info {
-                font-size: 14px;
-            }
+.donations-page .menu-icon,
+.donations-page .sidebar {
+    background: var(--page-wine);
+}
 
-            .qrcode-container img {
-                width: 150px;
-            }
+.donations-page .mainContent {
+    box-sizing: border-box;
+    padding: 2.5rem max(1rem, calc((100% - 980px) / 2)) 3.5rem;
+    background: var(--page-cream);
+}
 
-            .doacao-container {
-                flex-direction: column; /* Em telas menores, empilha os elementos */
-                align-items: center;
-            }
+.doacao-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--page-border);
+    background: var(--page-paper);
+}
 
-            .qrcode-container {
-                margin-top: 20px;
-            }
-        }
+.doacao-container:first-child {
+    color: var(--page-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.doacao-container:nth-child(2) {
+    gap: clamp(2rem, 6vw, 5rem);
+    justify-content: space-between;
+}
+
+.doacao-container p {
+    margin: 0 0 0.75rem;
+}
+
+.contact-info {
+    color: var(--page-muted);
+    font-size: 1rem;
+}
+
+.contact-info b,
+.doacao-container strong {
+    color: var(--page-wine);
+}
+
+.qrcode-container {
+    display: flex;
+    max-width: 300px;
+    flex: 0 0 260px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.qrcode-container img {
+    width: min(200px, 100%);
+    margin-bottom: 1rem;
+    border: 1px solid var(--page-border);
+}
+
+.copyButton {
+    width: auto;
+    min-height: 44px;
+    flex: none;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--page-wine);
+    background: var(--page-wine);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.copyButton:hover {
+    background: var(--page-wine-hover);
+}
+
+.copyButton:focus-visible {
+    outline: 3px solid var(--page-gold);
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .donations-page .topHeader {
+        min-height: 88px;
+        padding-inline: 1rem;
+    }
+
+    .donations-page .iconetopo {
+        width: 56px;
+        height: 62px;
+        flex-basis: 56px;
+    }
+
+    .donations-page .headerTitle {
+        font-size: 1.15rem;
+    }
+
+    .donations-page .apostolic-identity {
+        width: 42px;
+        height: 48px;
+        flex-basis: 42px;
+        margin-left: auto;
+    }
+
+    .doacao-container:nth-child(2) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .qrcode-container {
+        max-width: none;
+        flex-basis: auto;
+    }
+}

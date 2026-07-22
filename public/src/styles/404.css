@@ -1,0 +1,248 @@
+.error-page {
+    --page-wine: #5b0f14;
+    --page-wine-hover: #761a21;
+    --page-gold: #b88a32;
+    --page-cream: #f7f3ec;
+    --page-paper: #fffdf9;
+    --page-text: #2a201c;
+    --page-muted: #655a54;
+    background: var(--page-cream);
+    color: var(--page-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error-page .wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    background: var(--page-paper);
+}
+
+.error-page .wrapper > header {
+    gap: 0;
+    background: var(--page-paper);
+}
+
+.error-page .rite-bar {
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1rem;
+    background: #3e0d0b;
+    color: #fff;
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.error-page .topHeader {
+    max-width: 1180px;
+    min-height: 105px;
+    margin: auto;
+    padding: 0.75rem 1.5rem;
+}
+
+.error-page .iconetopo {
+    width: 72px;
+    height: 78px;
+    flex: 0 0 72px;
+}
+
+.error-page .iconetopo img {
+    object-fit: contain;
+    mask-image: none;
+}
+
+.error-page .headerTitle {
+    width: auto;
+    margin: 0 0 0 1rem;
+    color: var(--page-wine);
+    font-family: "Cormorant", "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.1;
+    text-align: left;
+}
+
+.error-page .apostolic-identity {
+    display: inline-flex;
+    width: 54px;
+    height: 62px;
+    flex: 0 0 54px;
+    margin-left: 1.25rem;
+}
+
+.error-page .apostolic-identity img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.error-page .topButtons {
+    width: auto;
+    flex: 0 1 auto;
+    gap: 0.15rem;
+    justify-content: center;
+    margin-left: auto;
+    background: var(--page-paper);
+}
+
+.error-page .topButtons a {
+    width: auto;
+    min-height: 44px;
+    flex: none;
+    box-sizing: border-box;
+    padding: 0.75rem 0.85rem;
+    background: transparent;
+    color: #3e0d0b;
+    text-decoration: none;
+}
+
+.error-page .topButtons a:hover {
+    background: var(--page-cream);
+    color: var(--page-wine);
+}
+
+.error-page .menu-icon,
+.error-page .sidebar,
+.error-page footer {
+    background: var(--page-wine);
+}
+
+.error-page .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    min-height: 44px;
+    flex: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1.75rem;
+}
+
+.error-content {
+    display: grid;
+    width: min(1050px, calc(100% - 2rem));
+    min-height: calc(100vh - 280px);
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(2rem, 7vw, 6rem);
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+.error-code {
+    margin: 0 0 0.6rem;
+    color: var(--page-gold);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.error-copy h1 {
+    margin: 0;
+    color: var(--page-wine);
+    font-family: "Cormorant", "Times New Roman", serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.error-copy > p:not(.error-code) {
+    max-width: 520px;
+    color: var(--page-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.error-actions a {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.75rem 1.2rem;
+    border: 1px solid var(--page-wine);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.error-primary {
+    background: var(--page-wine);
+    color: #fff;
+}
+
+.error-secondary {
+    background: transparent;
+    color: var(--page-wine);
+}
+
+.error-actions a:hover {
+    background: var(--page-wine-hover);
+    color: #fff;
+}
+
+.error-content > img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.error-page footer {
+    min-height: 80px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .error-page .topHeader {
+        min-height: 88px;
+        padding-inline: 1rem;
+    }
+
+    .error-page .iconetopo {
+        width: 56px;
+        height: 62px;
+        flex-basis: 56px;
+    }
+
+    .error-page .headerTitle {
+        font-size: 1.15rem;
+    }
+
+    .error-page .apostolic-identity {
+        width: 42px;
+        height: 48px;
+        flex-basis: 42px;
+        margin-left: auto;
+    }
+
+    .error-content {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding-top: 4rem;
+        text-align: center;
+    }
+
+    .error-copy > p:not(.error-code) {
+        margin-inline: auto;
+    }
+
+    .error-actions {
+        justify-content: center;
+    }
+
+    .error-content > img {
+        max-height: 360px;
+    }
+}
